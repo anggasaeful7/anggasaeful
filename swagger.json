@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "API Perkenalan Angga",
+    "description": "",
+    "version": "0.0.1"
+  },
+  "_server": {
+    "url": "http://localhost:3000",
+    "description": "Local"
+  },
+  "tags": "Perkenalan",
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["Perkenalan"],
+        "description": "Get Perkenalan",
+        "responses": {
+          "200": {
+            "description": "Successfull",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "nama": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "example": {
+                      "nama": "Angga Saeful P",
+                      "message": "Halo, nama saya Angga Saeful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
